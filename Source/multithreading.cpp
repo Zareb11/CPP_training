@@ -22,6 +22,8 @@ void function2(){
 int main() {
 
     std::thread worker1(function1);
-    //std::thread worker2(function2);
+    std::thread worker2(function2);
+    worker1.join();
+    worker2.join();
     return 0;
 }
